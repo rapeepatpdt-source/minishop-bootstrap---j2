@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดสินค้า</title>
+    <!-- นำเข้า CSS ของ Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body class="bg-light p-4">
+
+    <div class="container mt-4">
+        
+        <!-- 📦 กรอบข้อมูลสินค้าหลัก (ใช้ Card ทำกรอบสีขาวขอบมน) -->
+        <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5 mb-5 bg-white">
+            
+            <!-- ใช้ระบบ Grid แบ่งหน้าจอซ้าย-ขวา -->
+            <div class="row g-5">
+                
+                <!-- 🖼️ ฝั่งซ้าย: แกลลอรีรูปภาพ (ใช้พื้นที่ 6 ส่วนจาก 12 ส่วน) -->
+                <div class="col-12 col-md-6">
+                    
+                    <!-- 1. พื้นที่แสดงรูปภาพขนาดใหญ่ (Tab Content) -->
+                    <div class="tab-content mb-3 border rounded-4 overflow-hidden" id="productImageContent">
+                        
+                        <!-- รูปภาพที่ 1 (ใส่คลาส show active เพื่อให้แสดงเป็นรูปแรกเสมอ) -->
+                        <div class="tab-pane fade show active" id="img1" role="tabpanel">
+                            <img src="images/banner1.jpg" class="img-fluid w-100" alt="รูปหลัก" style="height: 400px; object-fit: cover;">
+                        </div>
+                        
+                        <!-- รูปภาพที่ 2 (ซ่อนไว้รอการกดคลิก) -->
+                        <div class="tab-pane fade" id="img2" role="tabpanel">
+                            <img src="images/banner2.jpg" class="img-fluid w-100" alt="มุมซ้าย" style="height: 400px; object-fit: cover;">
+                        </div>
+
+                    </div>
+
+                    <!-- 2. พื้นที่ปุ่มกดสลับรูปภาพย่อย (Nav Pills) -->
+                    <ul class="nav nav-pills row g-2" id="productImageTabs" role="tablist">
+                        
+                        <!-- ปุ่มกดรูปที่ 1 (สั่งให้ไปเปิด id="img1") -->
+                        <li class="nav-item col-4" role="presentation">
+                            <button class="nav-link active w-100 p-0 bg-transparent border-0" data-bs-toggle="pill" data-bs-target="#img1" type="button" role="tab">
+                                <img src="images/banner1.jpg" class="img-fluid rounded-3 border w-100" alt="รูปย่อยที่ 1" style="height: 100px; object-fit: cover;">
+                            </button>
+                        </li>
+                        
+                        <!-- ปุ่มกดรูปที่ 2 (สั่งให้ไปเปิด id="img2") -->
+                        <li class="nav-item col-4" role="presentation">
+                            <button class="nav-link w-100 p-0 bg-transparent border-0" data-bs-toggle="pill" data-bs-target="#img2" type="button" role="tab">
+                                <img src="images/banner2.jpg" class="img-fluid rounded-3 border w-100" alt="รูปย่อยที่ 2" style="height: 100px; object-fit: cover;">
+                            </button>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- 📝 ฝั่งขวา: รายละเอียดสินค้า (ใช้พื้นที่ 6 ส่วนที่เหลือ) -->
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+                    
+                    <h1 class="fw-bold mb-3 fs-2 text-dark">โน้ตบุ๊กประสิทธิภาพสูง</h1>
+                    <p class="text-muted mb-4 fs-6">
+                        สุดยอดโน้ตบุ๊กสำหรับการเรียนเขียนโปรแกรมและทำงานกราฟิก มาพร้อมหน้าจอความละเอียดสูงและระบบประมวลผลรุ่นล่าสุด
+                    </p>
+                    
+                    <h2 class="text-danger fw-bold mb-4">25,900 บาท</h2>
+                    <hr class="text-secondary mb-4">
+
+                    <button class="btn btn-danger btn-lg rounded-pill px-5 fw-bold w-100">
+                        🛒 สั่งซื้อสินค้า
+                    </button>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ⚠️ ขาดไม่ได้: ต้องเรียกใช้ไฟล์ JS ของ Bootstrap เพื่อให้ระบบกดสลับรูปทำงานได้ -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

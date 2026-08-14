@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ทดสอบ JavaScript</title>
+</head>
+
+<body>
+    <h1>ดึงไฟล์สคริปต์จากภายนอกมาใช้งาน</h1>
+
+    <!-- ตั้งรหัส id ว่า priceDisplay เพื่อเตรียมให้ JS มาเปลี่ยนข้อความ -->
+    <h2 id="priceDisplay">ราคาสินค้า: 0 บาท</h2>
+
+    <!-- ตั้งรหัส id ว่า buyBtn เพื่อเตรียมให้ JS สั่งทำงานตอนถูกคลิก -->
+    <button id="buyBtn">กดเพิ่มลงตะกร้า</button>
+
+    <!-- 🔗 ส่วนสำคัญ: เรียกใช้ไฟล์ app.js ไว้ล่างสุด เพื่อให้หน้าเว็บโหลดเสร็จก่อนเสมอ -->
+    <hr>
+    <!-- สร้างช่องให้ลูกค้ากรอกจำนวนสินค้า (type="number" บังคับให้พิมพ์ได้แค่ตัวเลข) -->
+    <label>ระบุจำนวนที่ต้องการ:</label>
+    <input type="number" id="qtyInput" value="1">
+
+    <!-- ปุ่มกดสำหรับสั่งคำนวณ -->
+    <button id="calcBtn">คำนวณยอดรวม</button>
+
+    <!-- พื้นที่สำหรับแสดงผลลัพธ์ยอดเงินรวม -->
+    <h3 id="totalDisplay">ยอดชำระทั้งหมด: 0 บาท</h3>
+    <hr>
+    <h3>รายการสินค้าในตะกร้าของคุณ:</h3>
+
+    <!-- เตรียมกล่องรายการเปล่า ๆ ไว้ และตั้งชื่อ ID -->
+    <ul id="cartList"></ul>
+    <!-- ปุ่มสำหรับสั่งให้ JavaScript เริ่มทำงาน -->
+    <button id="showCartBtn">แสดงรายการสินค้า</button>
+    <hr>
+    <h2>➕ เพิ่มสินค้าใหม่เข้าตะกร้า</h2>
+    <input type="text" id="newNameInput" placeholder="ใส่ชื่อสินค้าตรงนี้">
+    <input type="number" id="newPriceInput" placeholder="ใส่ราคาส่งตรงนี้">
+    <button id="addBtn">เพิ่มสินค้า</button>
+    <button id="clearBtn" style="color: red;">🗑️ ล้างตะกร้าทั้งหมด</button>
+
+    <h2>🛒 ตะกร้าสินค้าของคุณ</h2>
+    <!-- ปุ่มสั่งให้ระบบทำงาน -->
+    <button id="checkoutBtn">ดูสรุปรายการสั่งซื้อ</button>
+    <!-- พื้นที่แสดงรายชื่อสินค้าและราคา -->
+    <ul id="orderList"> </ul>
+    <!-- พื้นที่แสดงยอดรวมสุทธิ -->
+    <h3 id="totalPriceDisplay">ยอดรวมทั้งสิ้น: 0 บาท</h3>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
